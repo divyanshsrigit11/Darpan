@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Divyansh Srivastava\\Desktop\\Darpan-NewsPortal\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{31743D87-F399-4E9F-989E-FFEC8474ED15}|Darpan-NewsPortal\\Darpan-NewsPortal.csproj|c:\\users\\divyansh srivastava\\desktop\\darpan-newsportal\\darpan-newsportal\\contact.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{31743D87-F399-4E9F-989E-FFEC8474ED15}|Darpan-NewsPortal\\Darpan-NewsPortal.csproj|solutionrelative:darpan-newsportal\\contact.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31743D87-F399-4E9F-989E-FFEC8474ED15}|Darpan-NewsPortal\\Darpan-NewsPortal.csproj|c:\\users\\divyansh srivastava\\desktop\\darpan-newsportal\\darpan-newsportal\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{31743D87-F399-4E9F-989E-FFEC8474ED15}|Darpan-NewsPortal\\Darpan-NewsPortal.csproj|solutionrelative:darpan-newsportal\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31743D87-F399-4E9F-989E-FFEC8474ED15}|Darpan-NewsPortal\\Darpan-NewsPortal.csproj|C:\\Users\\Divyansh Srivastava\\Desktop\\Darpan-NewsPortal\\darpan-newsportal\\site1.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{31743D87-F399-4E9F-989E-FFEC8474ED15}|Darpan-NewsPortal\\Darpan-NewsPortal.csproj|solutionrelative:darpan-newsportal\\site1.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Contact.aspx",
+              "DocumentMoniker": "C:\\Users\\Divyansh Srivastava\\Desktop\\Darpan-NewsPortal\\Darpan-NewsPortal\\Contact.aspx",
+              "RelativeDocumentMoniker": "Darpan-NewsPortal\\Contact.aspx",
+              "ToolTip": "C:\\Users\\Divyansh Srivastava\\Desktop\\Darpan-NewsPortal\\Darpan-NewsPortal\\Contact.aspx",
+              "RelativeToolTip": "Darpan-NewsPortal\\Contact.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-02T09:17:29.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Home.aspx",
+              "DocumentMoniker": "C:\\Users\\Divyansh Srivastava\\Desktop\\Darpan-NewsPortal\\Darpan-NewsPortal\\Home.aspx",
+              "RelativeDocumentMoniker": "Darpan-NewsPortal\\Home.aspx",
+              "ToolTip": "C:\\Users\\Divyansh Srivastava\\Desktop\\Darpan-NewsPortal\\Darpan-NewsPortal\\Home.aspx",
+              "RelativeToolTip": "Darpan-NewsPortal\\Home.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-30T13:46:20.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Site1.Master",
+              "DocumentMoniker": "C:\\Users\\Divyansh Srivastava\\Desktop\\Darpan-NewsPortal\\Darpan-NewsPortal\\Site1.Master",
+              "RelativeDocumentMoniker": "Darpan-NewsPortal\\Site1.Master",
+              "ToolTip": "C:\\Users\\Divyansh Srivastava\\Desktop\\Darpan-NewsPortal\\Darpan-NewsPortal\\Site1.Master",
+              "RelativeToolTip": "Darpan-NewsPortal\\Site1.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-30T13:40:29.88Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

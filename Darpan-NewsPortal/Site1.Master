@@ -1,0 +1,182 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Darpan.Site1" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>Panchayat Khabar - Darpan News Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="Content/style.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div class="top-bar bg-light text-dark py-1">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+        <div class="top-bar-left">
+            <marquee direction="right">
+                <div class="scrolling-content-container">
+                    <div class="scrolling-combined-entity d-inline-flex align-items-center">
+                        <img src="img/logo.jpeg" alt="Panchayat Khabar Logo" class="me-2" style="height: 25px;" />
+                        <span class="fw-bold fs-6 text-dark">Panchayat Khabar Panchayat Khabar Panchayat Khabar</span>
+                    </div>
+                </div>
+            </marquee>
+        </div>
+        <div class="top-bar-right d-flex align-items-center">
+            <div class="live-clock me-3 d-flex align-items-center fw-bold fs-6" id="liveTime">
+                <i class="fas fa-calendar-alt text-primary me-2 text-dark"></i>
+                <span id="clockDisplay"></span> </div>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f text-facebook fs-5 me-1"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram text-instagram fs-5 me-1"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube text-youtube fs-5 me-1"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-whatsapp text-whatsapp fs-5 me-1"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <a class="navbar-brand" href="Home.aspx"> 
+                <img src="img/logo.jpeg" alt="Panchayat Khabar Logo" class="main-logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav w-100 justify-content-around">
+                    <li class="nav-item"><a class="nav-link" href="Home.aspx">Home</a></li> 
+                    <li class="nav-item"><a class="nav-link" href="Editorial.aspx">Editorial</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Sports.aspx">Sports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Education.aspx">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Health.aspx">Health</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Business.aspx">Business</a></li>
+                    <li class="nav-item"><a class="nav-link" href="District.aspx">District</a></li>
+                    <li class="nav-item"><a class="nav-link" href="About.aspx">Cover Story</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDesh" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Desh (देश)</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownDesh">
+                        <a class="dropdown-item" href="Desh.aspx">National (राज्य)</a>
+                        <a class="dropdown-item" href="Videsh.aspx">International (विदेश)</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Panchayat.aspx">Panchayat</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownOther" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Other</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownOther">
+                                <a class="dropdown-item" href="Crime.aspx">Crime</a>
+                                <a class="dropdown-item" href="Corruption.aspx">Corruption</a>
+                                <a class="dropdown-item" href="Election2022.aspx">Election 2022</a>
+                                <a class="dropdown-item" href="FilmStars.aspx">Film Stars</a>
+                                <a class="dropdown-item" href="Astrology.aspx">Astrology</a>
+                                <a class="dropdown-item" href="AgriBusiness.aspx">Agri Business</a>
+                                <a class="dropdown-item" href="BeautyFashion.aspx">Beauty & Fashion</a>
+                            </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="Contact.aspx">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="main-content-wrapper">
+            <div class="container-fluid py-4">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+        </div>
+
+        <footer class="site-footer">
+        <div class="container-fluid footer-container">
+            <div class="row">
+                <div class="col-md-4 footer-col">
+                    <h5>Contact Us</h5>
+                    <img src="img/logo.jpeg" alt="Panchayat Khabar Logo" class="footer-logo mb-3" />
+                    <address>
+                        <p><strong>Address 1:</strong> F-32, MG Marg, Sarvodaya Nagar, Lucknow-226006, U.P</p>
+                        <p><strong>Address 2:</strong> B-4/91, Vinay Khand, Gomti Nagar, Lucknow-226010, U.P</p>
+                        <p><strong>Contact:</strong> <a href="tel:7393988808">+917393988808</a></p>
+                        <p><strong>Email:</strong> <a href="mailto:divyanshsri1101@gmail.com">panchayatkhabar@gmail.com</a></p>
+                    </address>
+                    <div class="footer-social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 footer-col">
+                    <h5>Categories</h5>
+                    <ul class="footer-categories">
+                        <li><a href="Editorial.aspx">Editorial</a></li>
+                        <li><a href="Sports.aspx">Sports</a></li>
+                        <li><a href="Education.aspx">Education</a></li>
+                        <li><a href="Health.aspx">Health</a></li>
+                        <li><a href="Business.aspx">Business</a></li>
+                        <li><a href="District.aspx">District</a></li>
+                        <li><a href="#">Other</a></li>
+                        <li><a href="Desh.aspx">National</a></li>
+                        <li><a href="Panchayat.aspx">Panchayat</a></li>
+                        <li><a href="FilmStars.aspx">Film Stars</a></li>
+                        <li><a href="Astrology.aspx">Astrology</a></li>
+                        <li><a href="AgriBusiness.aspx">Agri Business</a></li>
+                        <li><a href="BeautyFashion.aspx">Beauty & Fashion</a></li>
+                        <li><a href="Sports.aspx">Sports News</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 footer-col">
+                    <h5 class="text-white mb-3">Gallery</h5>
+                        <div class="row row-cols-3 g-1 justify-content-center"> 
+                            <div class="col"> 
+                                <a href="img/home.png" data-toggle="lightbox" data-gallery="footer-gallery" class="d-block gallery-fixed-size-wrapper">
+                                <img src="img/home.png" alt="Gallery Image 1" class="img-fluid rounded" /> </a>
+                            </div>
+                        <div class="col">
+                                <a href="img/gallery.png" data-toggle="lightbox" data-gallery="footer-gallery" class="d-block gallery-fixed-size-wrapper">
+                                <img src="img/gallery.png" alt="Gallery Image 2" class="img-fluid rounded" /></a>
+                        </div>
+                        <div class="col">
+                            <a href="Images/gallery3.png" data-toggle="lightbox" data-gallery="footer-gallery" class="d-block gallery-fixed-size-wrapper">
+                            <img src="Images/gallery3.png" alt="Gallery Image 3" class="img-fluid rounded" /></a>
+                        </div>
+                        <div class="col">
+                            <a href="Images/gallery4.png" data-toggle="lightbox" data-gallery="footer-gallery" class="d-block gallery-fixed-size-wrapper">
+                            <img src="Images/gallery4.png" alt="Gallery Image 4" class="img-fluid rounded" /></a>
+                        </div>
+                        <div class="col">
+                            <a href="Images/gallery5.png" data-toggle="lightbox" data-gallery="footer-gallery" class="d-block gallery-fixed-size-wrapper">
+                            <img src="Images/gallery5.png" alt="Gallery Image 5" class="img-fluid rounded" /></a>
+                        </div>
+                        <div class="col">
+                            <a href="Images/gallery6.png" data-toggle="lightbox" data-gallery="footer-gallery" class="d-block gallery-fixed-size-wrapper">
+                            <img src="Images/gallery6.png" alt="Gallery Image 6" class="img-fluid rounded" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <%--<div class="admin-login-bar bg-dark">
+            <div class="container text-center">
+                <a href="#" class="admin-login-link text-warning">Admin Login</a>
+            </div>
+        </div>--%>
+
+        <div class="copyright-bar bg-dark">
+            <div class="container text-center">
+                © 2025 <strong>Panchayat Khabar</strong>. All Rights Reserved. Developed by - <a href="https://github.com/divyanshsrigit11?tab=repositories" target="_blank">Divyansh Srivastava</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</form>
+</body>
+</html>

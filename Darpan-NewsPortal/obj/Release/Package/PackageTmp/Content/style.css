@@ -1,0 +1,620 @@
+﻿/* Content/style.css */
+
+/* Top Bar Styling - CORRECTED */
+.top-bar {
+    padding: 5px 0;
+    font-size: 0.9em;
+    border-bottom: 1px solid #0056b3;
+}
+
+    .top-bar .container-fluid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+/* MODIFIED: top-bar-left to separate logo and scrolling text */
+.top-bar-left {
+    display: flex;
+    align-items: center;
+    width: 60%; /* Adjust width as needed */
+}
+
+.top-bar-logo { /* Logo is static on the left */
+    height: 30px; /* Adjust size */
+    margin-right: 15px;
+}
+
+.scrolling-text-container { /* Container for the scrolling text only */
+    overflow: hidden;
+    white-space: nowrap;
+    flex-grow: 1; /* Allow it to take available space */
+    position: relative;
+}
+
+.scrolling-text { /* Scrolling text only, moving right-to-left */
+    display: inline-block;
+    padding-right: 100%; /* Start off-screen to the right */
+    animation: scrollRightToLeft 15s linear infinite; /* Animation for right-to-left movement */
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+    .scrolling-text span {
+        margin-right: 30px; /* Space between repeated text */
+    }
+
+@keyframes scrollRightToLeft { /* Keyframe for right-to-left scrolling */
+    0% {
+        transform: translateX(0%); /* Start at original position */
+    }
+
+    100% {
+        transform: translateX(-100%); /* Move to left off-screen */
+    }
+}
+
+.live-clock {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Adjusted for dark top bar */
+    border-radius: 5px;
+    color: #333;
+    display: flex; /* To align icon and text */
+    align-items: center;
+}
+
+    .live-clock i { /* Calendar icon styling */
+        margin-right: 8px;
+        color: #fff; /* White color for the icon on dark background */
+    }
+
+.social-icons a {
+    /* Removed 'color: #fff;' as it will be overridden by specific icon colors */
+    margin: 0 5px;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.social-icons .fa-facebook-f {
+    color: #3b5998; /* Facebook Blue */
+}
+
+.social-icons .fa-instagram {
+    color: #C13584;
+}
+
+.social-icons .fa-youtube {
+    color: #ff0000;
+}
+
+.social-icons .fa-whatsapp {
+    color: #25d366;
+}
+
+.social-icons a:hover {
+    color: #ffd700; /* Gold on hover (maintained) */
+}
+
+/* Navbar Styling (maintained) */
+.navbar-custom {
+    background-color: #0056b3;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand .main-logo {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.navbar-brand span {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: bold;
+    padding: 0.8rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    .navbar-nav .nav-link:hover {
+        background-color: #007bff;
+        color: #fff !important;
+        border-radius: 5px;
+    }
+
+/* Main Content Area (maintained) */
+.main-content-wrapper {
+    background-color: #f0f2f5;
+    padding-bottom: 20px;
+}
+
+    .main-content-wrapper .container-fluid {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        padding: 20px;
+    }
+
+.featured-section {
+    padding-right: 15px;
+}
+
+.featured-banner {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.editorial-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+    .editorial-section h4 {
+        color: #0056b3;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .editorial-section img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    }
+
+    .editorial-section p {
+        font-size: 0.95em;
+        line-height: 1.4;
+        color: #555;
+    }
+
+    .editorial-section .read-more {
+        display: inline-block;
+        margin-top: 5px;
+        color: #007bff;
+        font-weight: bold;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+        .editorial-section .read-more:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+.news-list-section {
+    padding-left: 15px;
+}
+
+.section-title {
+    color: #0056b3;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+.news-scroll-container {
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-list-item {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+    .news-list-item:hover {
+        transform: translateY(-3px);
+    }
+
+    .news-list-item a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        color: #333;
+    }
+
+.news-item-content {
+    flex-grow: 1;
+    margin-right: 10px;
+    font-size: 1.05em;
+    line-height: 1.5;
+}
+
+.news-icon {
+    margin-right: 8px;
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+.news-read-more {
+    font-weight: bold;
+    color: #007bff;
+    white-space: nowrap;
+}
+
+/* Scrollbar Customization (for Webkit browsers) */
+.news-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.news-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.news-scroll-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+    .news-scroll-container::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+/* Footer Styling (maintained) */
+.site-footer {
+    background-color: #007bff;
+    color: #fff;
+    padding-top: 30px;
+    font-size: 0.9em;
+}
+
+    .site-footer .footer-col {
+        margin-bottom: 30px;
+    }
+
+    .site-footer h5 {
+        color: #f9f9f9;
+        font-weight: bold;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 5px;
+    }
+
+        .site-footer h5::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #007bff;
+        }
+
+    .site-footer address p {
+        margin-bottom: 8px;
+        line-height: 1.6;
+    }
+
+    .site-footer address a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+        .site-footer address a:hover {
+            color: #007bff;
+        }
+
+    .site-footer .footer-logo {
+        max-width: 150px;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .site-footer .footer-social-icons a {
+        font-size: 1.5em; /* Increased size as per previous discussion/site */
+        margin-right: 15px; /* Spacing between icons */
+        transition: color 0.3s ease;
+    }
+
+/* Specific brand colors for social icons - ensure these override the general 'a' color if present */
+.footer-social-icons .fa-facebook-f {
+    color: #3b5998; /* Facebook Blue */
+}
+
+.footer-social-icons .fa-instagram {
+    color: #C13584; /* Instagram Purple/Pink */
+}
+
+.footer-social-icons .fa-youtube {
+    color: #ff0000; /* YouTube Red */
+}
+
+.footer-social-icons .fa-whatsapp {
+    color: #25d366; /* WhatsApp Green */
+}
+
+.site-footer .footer-social-icons a:hover {
+    opacity: 0.8; /* Subtle fade on hover, better for brand colors than changing to blue */
+    /* If you want the blue hover, ensure this rule is more specific or uses !important */
+    /* color: #007bff; */
+}
+
+.site-footer .footer-categories {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Ensure no default margin pushing it */
+    display: flex; /* Use flexbox for horizontal arrangement */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 5px; /* Small gap between category items */
+}
+
+    .site-footer .footer-categories li {
+        margin-bottom: 0; /* Remove default bottom margin from list items */
+        /* Remove 'float' or 'inline-block' if you had them, as flexbox handles layout */
+    }
+
+        .site-footer .footer-categories li a {
+            color: rgba(255, 255, 255, 0.7); /* Muted white for links */
+            text-decoration: none;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            display: block; /* Important for padding and hover effect */
+            padding: 5px 10px; /* Padding for the tag-like button look */
+            background-color: rgba(255, 255, 255, 0.1); /* Light background for the "tag" */
+            border-radius: 4px; /* Rounded corners for the "tag" */
+            font-size: 0.85em; /* Slightly smaller font for compactness */
+            white-space: nowrap; /* Prevent text wrapping within a single category item */
+            border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+        }
+
+            .site-footer .footer-categories li a:hover {
+                color: #fff; /* Brighter white on hover */
+                background-color: #007bff; /* Primary blue on hover */
+                border-color: #007bff; /* Match border color on hover */
+                text-decoration: none; /* Remove underline on hover, as the background change is enough */
+            }
+
+/* --- Gallery Section Styles (REFINED) --- */
+
+.footer-gallery {
+    display: grid;
+    /* Use auto-fit to create columns based on a fixed size for each item. */
+    /* This will fit as many 80px wide items as possible, centering them if needed. */
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Each item will try to be around 80px wide */
+    gap: 5px;
+    justify-content: center; /* Centers the grid items within the column */
+}
+
+.gallery-item-wrapper {
+    display: block;
+    width: 100%; /* Still takes up 100% of its grid cell */
+    height: 100%;
+    text-decoration: none;
+    border-radius: 6px;
+    overflow: hidden;
+    /* We can also add a max-width here to really constrain it */
+    max-width: 80px; /* Constrain the wrapper to a max width */
+    max-height: 80px; /* Constrain the wrapper to a max height for square */
+}
+
+.gallery-box {
+    width: 100%;
+    /* Instead of padding-top for aspect ratio, set a fixed height directly */
+    height: 80px; /* Set a fixed height for the square box */
+    /* Ensure padding-top is reset if it's inherited or for clarity */
+    padding-top: 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #222;
+}
+
+    .gallery-box img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+        border: none;
+        border-radius: 0;
+    }
+
+        .gallery-box img:hover {
+            transform: scale(1.1); /* Zoom effect on hover */
+        }
+
+/* Responsive Adjustments for footer - update gallery */
+@media (max-width: 991.98px) {
+    .site-footer .footer-gallery {
+        /* On medium devices, still use auto-fit for consistency, but maybe allow slightly larger if desired */
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); /* Slightly smaller for tablets */
+        justify-content: center;
+    }
+
+    .gallery-item-wrapper, .gallery-box {
+        max-width: 70px; /* Adjust max-width here */
+        height: 70px; /* Adjust height here */
+    }
+}
+
+@media (max-width: 767.98px) { /* Smaller screens (e.g., mobile) */
+    .site-footer .footer-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); /* Even smaller for mobile */
+        gap: 5px;
+        justify-content: center;
+    }
+
+    .gallery-item-wrapper, .gallery-box {
+        max-width: 60px; /* Adjust max-width here */
+        height: 60px; /* Adjust height here */
+    }
+}
+
+
+    
+/* --- End Gallery Section Styles --- */
+
+.copyright-bar {
+    background-color: #000;
+    color: #aaa;
+    padding: 15px 0;
+    margin-top: 0;
+    font-size: 0.85em;
+    text-align: center;
+}
+
+    .copyright-bar a {
+        color: #007bff; /* Bootstrap primary blue for the link */
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+        .copyright-bar a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+/* Responsive Adjustments for footer (add more specific if needed) */
+@media (max-width: 767.98px) {
+    .site-footer .footer-categories {
+        columns: 1; /* Stack categories on small screens */
+    }
+
+    .site-footer .footer-gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+
+    .site-footer .footer-col {
+        text-align: center; /* Center content in columns on small screens */
+    }
+
+    .site-footer .footer-logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .site-footer h5::after {
+        left: 50%;
+        transform: translateX(-50%); /* Center the underline on small screens */
+    }
+
+    .site-footer .footer-social-icons {
+        justify-content: center; /* Center social icons on small screens */
+        display: flex;
+    }
+}
+
+
+.copyright-bar {
+    background-color: #000;
+    color: #aaa;
+    padding: 15px 0;
+    font-size: 0.85em;
+    text-align: center;
+}
+
+    .copyright-bar a {
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+        .copyright-bar a:hover {
+            color: #ffd700;
+            text-decoration: underline;
+        }
+
+/* Responsive Adjustments - MODIFIED to reflect right-to-left scroll on small screens */
+@media (max-width: 991.98px) {
+    .top-bar-left {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap; /* Allow wrapping for logo and text */
+    }
+
+    .top-bar-logo {
+        margin-right: 10px; /* Adjust spacing */
+        margin-bottom: 5px; /* Space if wrapping occurs */
+    }
+
+    .scrolling-text-container {
+        flex-grow: unset; /* Remove flex-grow to allow wrapping */
+        width: auto; /* Allow content to dictate width */
+    }
+
+    .scrolling-text {
+        animation: none; /* Disable scrolling text on small screens */
+        white-space: normal; /* Allow text to wrap */
+        padding-right: 0;
+        text-align: center; /* Center the static text */
+    }
+
+        .scrolling-text span {
+            display: block; /* Stack the text */
+            margin-right: 0;
+        }
+
+    .top-bar-right {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .navbar-brand {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+        .navbar-nav .nav-item {
+            margin-bottom: 5px;
+        }
+
+    .featured-section, .news-list-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .news-list-section {
+        margin-top: 30px;
+    }
+
+    .site-footer .footer-categories {
+        columns: 1;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .top-bar-left {
+        flex-direction: column;
+    }
+
+    .live-clock {
+        margin-bottom: 10px;
+    }
+}
